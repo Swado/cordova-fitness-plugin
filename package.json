@@ -1,0 +1,35 @@
+{
+  "name": "cordova-fitness-plugin",
+  "version": "1.0.0",
+  "description": "Android Fitness Plugin",
+  "cordova": {
+    "id": "cordova-fitness-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "android",
+    "fitness",
+    "api",
+    "google",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Swaraj Dolhare and Supriy Jinturkar",
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swado/cordova-fitness-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Swado/cordova-fitness-plugin/issues"
+  },
+  "homepage": "https://github.com/Swado/cordova-fitness-plugin#readme"
+}

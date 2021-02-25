@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-fitness-plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>FitnessPlugin</name>
+
+    <description>Fitness Plugin for subscribing user to fitness api</description>
+    <license>Apache 2.0</license>
+    <keywords>android, fitness,api,google</keywords>
+
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module name="FitnessPlugin" src="www/FitnessPlugin.js">
+        <clobbers target="FitnessPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FitnessPlugin">
+                <param name="android-package" value="com.dietplanner.FitnessPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FitnessPlugin.java" target-dir="src/com/dietplanner/fitness-plugin" />
+    </platform>
+</plugin>
