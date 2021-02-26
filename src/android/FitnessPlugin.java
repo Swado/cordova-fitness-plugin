@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import android.content.Intent;
 import android.util.Log;
+import android.os.Build;
 import android.Manifest;
 import androidx.annotation.NonNull;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -56,7 +57,11 @@ public class FitnessPlugin extends CordovaPlugin {
             //String PERMISSIONS  = "Manifest.permission.ACTIVITY_RECOGNITION";
 
             CordovaPlugin plugin = (CordovaPlugin) this;
-            if(!cordova.hasPermission(Manifest.permission.ACTIVITY_RECOGNITION)){
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+                Log.i("LogBuildVer","less than Q");
+                signIn();
+            }
+            else if(!cordova.hasPermission(Manifest.permission.ACTIVITY_RECOGNITION)){
                 Log.i("LogPermission","no permission");
                 cordova.requestPermission(plugin,2,Manifest.permission.ACTIVITY_RECOGNITION);
             }
@@ -158,3 +163,4 @@ public class FitnessPlugin extends CordovaPlugin {
 
 
 }
+ 
